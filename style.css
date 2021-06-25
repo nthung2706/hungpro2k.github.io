@@ -30,7 +30,7 @@ canvas {
   background: rgba(75, 75, 250, 0.3);
   border-radius: 3px;
 }
-.social-link{text-align:center;margin-top:200px;position: absolute;}
+.social-link{text-align:center;margin-top:150px;position: absolute;}
 
 .social-link>ul{
  margin-left : -50px
