@@ -54,7 +54,7 @@ canvas {
         animation: gradient 10s ease-out infinite;
     border-radius: 3px;
 }
-.social-link{text-align:center;margin-top:200px;position: absolute;}
+.social-link{text-align:center;margin-top:120px;position: absolute;}
 
 .social-link>ul{
  margin-left : -44px
