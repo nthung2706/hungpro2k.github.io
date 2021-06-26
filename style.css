@@ -46,9 +46,9 @@ canvas {
   right: 0;
   bottom: 0;
   left: 0;
-    background: linear-gradient( 
+background: linear-gradient( 
 269deg
- , #669deb33,#c2a3ed5e,#ffdf7426,#ffc78c52);
+ , #669deb33,#c2a3ed5e,#f998ff26,#fd7bff52);
     background-size: 400% 400%;
         animation: gradient 10s ease-out infinite;
     border-radius: 3px;
