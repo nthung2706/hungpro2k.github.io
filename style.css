@@ -26,6 +26,7 @@ canvas {
 }
 
 .content>.name>h1{
+  margin-top: 270px;
     font-size:  80px;
     text-align:center;
     color: white;
@@ -38,7 +39,7 @@ canvas {
 }
 .content
 {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -54,7 +55,9 @@ canvas {
         animation: gradient 10s ease-out infinite;
     border-radius: 3px;
 }
-.social-link{text-align:center;margin-top:120px;position: absolute;}
+.social-link{
+  text-align:center;
+}
 
 .social-link>ul{
  margin-left : -44px
