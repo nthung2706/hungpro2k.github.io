@@ -51,10 +51,10 @@ canvas {
   bottom: 0;
   left: 0;
     background: linear-gradient( 
-269deg
- , #3689ff26,#c2a3ed5e,#f998ff26,#fd7bff17);
+16deg
+ , #3689ff26,#b6bfff5e,#f998ff26,#fd7bff17);
     background-size: 400% 400%;
-        animation: gradient 10s ease-out infinite;
+    animation: gradient s cubic-bezier(0.55, 0.09, 0.68, 0.53) infinite;
     border-radius: 3px;
 }
 .social-link{
