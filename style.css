@@ -52,7 +52,7 @@ canvas {
   left: 0;
     background: linear-gradient( 
 269deg
- , #4236ff26,#8476ff5e,#f998ff26,#feaeff17,#a6a5ff54,#a558d652);
+ , #3936ff52,#a89ef769,#f998ff26,#fd7bff17);
     background-size: 400% 400%;
     animation: gradient 10s ease-out infinite;
     border-radius: 3px;
