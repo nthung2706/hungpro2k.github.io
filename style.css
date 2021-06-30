@@ -91,6 +91,7 @@ a{color:#000;text-decoration:none}
 .social-link>ul>li>a{
   color:#fff;
   font-size:20px;
+	    transition: all 1s;
 }
 .social-link>ul>li>a:hover{
   color:#000;
