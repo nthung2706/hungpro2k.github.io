@@ -1,37 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hưng Nguyễn</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>  
+  <title>Happy Valentine's Day Max!</title>
+<link rel="icon" type="image/jpg" href="favicon.jpg">
+<style>
+.heart-switch {
+	 --duration: 0.45s;
+	 --stroke: #d1d6ee;
+	 --stroke-active: #ec4472;
+	 --fill: #fff;
+	 --fill-active: #ec638e;
+	 --shadow: rgba(0, 9, 61, .25);
+	 cursor: pointer;
+	 position: relative;
+	 transform: scale(var(--s, 1)) translateZ(0);
+	 transition: transform 0.2s;
+	 -webkit-tap-highlight-color: transparent;
+}
+ .heart-switch:active {
+	 --s: 0.95;
+}
+ .heart-switch input {
+	 -webkit-appearance: none;
+	 -moz-appearance: none;
+	 position: absolute;
+	 outline: none;
+	 border: none;
+	 pointer-events: none;
+	 z-index: 1;
+	 margin: 0;
+	 padding: 0;
+	 left: 1px;
+	 top: 1px;
+	 width: 18px;
+	 height: 18px;
+	 border-radius: 50%;
+	 background: #fff;
+	 box-shadow: 0 1px 3px 0 var(--shadow);
+}
+ .heart-switch input + svg {
+	 width: 36px;
+	 height: 25px;
+	 fill: var(--fill);
+	 stroke: var(--stroke);
+	 stroke-width: 1px;
+	 stroke-linejoin: round;
+	 display: block;
+	 transition: stroke var(--duration), fill var(--duration);
+}
+ .heart-switch input:not(:checked) {
+	 animation: uncheck var(--duration) linear forwards;
+}
+ .heart-switch input:checked {
+	 animation: check var(--duration) linear forwards;
+}
+ .heart-switch input:checked + svg {
+	 --fill: var(--fill-active);
+	 --stroke: var(--stroke-active);
+}
+ @keyframes uncheck {
+	 0% {
+		 transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+	}
+	 50% {
+		 transform: rotate(30deg) translateX(9px);
+	}
+	 75% {
+		 transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+	}
+	 100% {
+		 transform: rotate(30deg);
+	}
+}
+ @keyframes check {
+	 0% {
+		 transform: rotate(30deg);
+	}
+	 25% {
+		 transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+	}
+	 50% {
+		 transform: rotate(30deg) translateX(9px);
+	}
+	 100% {
+		 transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+	}
+}
+ html {
+	 box-sizing: border-box;
+	 -webkit-font-smoothing: antialiased;
+}
+ * {
+	 box-sizing: inherit;
+}
+ *:before, *:after {
+	 box-sizing: inherit;
+}
+ body {
+	 min-height: 100vh;
+	 display: flex;
+	 font-family: 'Roboto', Arial;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	 background: #f6f8ff;
+}
+ body .heart-switch {
+	 margin: 12px 0;
+}
+ body .dribbble {
+	 position: fixed;
+	 display: block;
+	 right: 20px;
+	 bottom: 20px;
+}
+ body .dribbble img {
+	 display: block;
+	 height: 28px;
+}
+ body .twitter {
+	 position: fixed;
+	 display: block;
+	 right: 64px;
+	 bottom: 14px;
+}
+ body .twitter svg {
+	 width: 32px;
+	 height: 32px;
+	 fill: #1da1f2;
+}
+ 
+</style>
+  
 </head>
 <body>
-    <div class="card">
-        <div class="card__img">
-          <img src="hungnguyen.jpg" alt="" />
-        </div>
-        <h2>Hưng Nguyễn</h2>
-        <p>Lập trình viên</p>
-        <div class="card__social">
-          <a target="_black" href="https://www.facebook.com/nthung2706">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a target="_black" href="https://www.youtube.com/channel/UCPt20EswEZcpynDvlCWsTKQ">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a target="_black" href="https://mail.google.com/mail/?view=cm&fs=1&to=nthung2706@gmail.com">
-            <i class="fab fa-google"></i>
-          </a>
-          <a
-            target="_black"href="https://github.com/nthung2706">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <a class="btn" href="tel:0373856186">Liên hệ với tôi</a>
-      </div>
-      
+	<label class="heart-switch">
+		<input type="checkbox">
+		<svg viewBox="0 0 33 23" fill="white">
+			<path d="M23.5,0.5 C28.4705627,0.5 32.5,4.52943725 32.5,9.5 C32.5,16.9484448 21.46672,22.5 16.5,22.5 C11.53328,22.5 0.5,16.9484448 0.5,9.5 C0.5,4.52952206 4.52943725,0.5 9.5,0.5 C12.3277083,0.5 14.8508336,1.80407476 16.5007741,3.84362242 C18.1491664,1.80407476 20.6722917,0.5 23.5,0.5 Z"></path>
+		</svg>
+	</label>
+	
+
+	
+	<!-- dribbble - twitter -->
+	<a class="dribbble" href="https://dribbble.com/shots/9070657-Heart-Switch" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
+	<a class="twitter" target="_blank" href="https://twitter.com/aaroniker_me"><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72"><path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z"></path></svg></a>
 </body>
 </html>
