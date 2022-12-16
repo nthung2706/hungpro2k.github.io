@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
 :root {
-  --pink-color: #f2726a;
+  --pink-color: red;
 }
 a{
   text-decoration: none;
@@ -16,7 +16,7 @@ a{
 
 body {
   height: 100vh;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+ background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
   display: flex;
@@ -41,7 +41,7 @@ body {
   height: 400px;
   border-radius: 10px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #ffffff69;
   overflow: hidden;
   margin: 0 30px;
 }
@@ -74,17 +74,17 @@ img {
 }
 
 h2 {
-  color: #404040;
+  color: #ffffff;
   margin-top: 40px;
 }
 
 p {
-  color: var(--pink-color);
+  color: #ffffff;
 }
 
 .card__social a {
   text-decoration: none;
-  color: #404040;
+  color: #ffffff;
   margin: 25px 20px 40px;
   display: inline-block;
   font-size: 18px;
@@ -98,9 +98,9 @@ p {
 .btn {
   outline: none;
   border: none;
-  color: #404040;
+  color: #ffffff;
   background-color: transparent;
-  border: 1px solid var(--pink-color);
+  border: 1px solid #fff;
   padding: 10px 20px;
   border-radius: inherit;
   cursor: pointer;
@@ -108,5 +108,7 @@ p {
 }
 
 .btn:hover {
-  background-color: var(--pink-color);
+  /* background-color: var(--pink-color); */
+  border: 1px solid var(--pink-color);
+
 }
